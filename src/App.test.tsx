@@ -1,6 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 import { describe, it, expect } from 'vitest';
+import userEvent from '@testing-library/user-event';
 
 describe('App', () => {
   it('renders without crashing', () => {
@@ -12,15 +13,17 @@ describe('App', () => {
     expect(input).toBeInTheDocument();
   });
 
-  it('handles input and displays output', () => {
+  it('handles input and displays output', async () => {
     render(<App />);
     const input = screen.getByRole('textbox');
 
-    // Simulate user typing 'help' and pressing Enter
-    input.value = 'help';
-    input.dispatchEvent(new KeyboardEvent('keydown', { key: 'Enter' }));
+    const user = userEvent.setup();
+    await user.type(input, 'help');
+    expect(input).toHaveValue('help');
 
-    // Check if the output for 'help' command is displayed
+    await user.keyboard('{Enter}');
+    expect(input).toHaveValue('');
+
     const helpOutput = screen.getByText(/Available commands:/i);
     expect(helpOutput).toBeInTheDocument();
   });

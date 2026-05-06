@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import useRunCommand from './hooks/useRunCommand';
+import runCommand from './utils/runCommand';
 
 function App() {
   const [bash, setBash] = useState('Anas-Abdul-El >');
@@ -18,7 +18,7 @@ function App() {
         return;
       }
 
-      const { output } = useRunCommand(input);
+      const { output } = runCommand(input);
 
       setHistory([...history, { command, output }]);
       setInput('');
