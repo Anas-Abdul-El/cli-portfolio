@@ -2,11 +2,11 @@ import { useState } from 'react';
 import useRunCommand from './hooks/useRunCommand';
 
 function App() {
+  const [bash, setBash] = useState('Anas-Abdul-El >');
   const [input, setInput] = useState('');
   const [history, setHistory] = useState<{ command: string; output: string }[]>(
     []
   );
-  const [bash, setBash] = useState('Anas-Abdul-El >');
 
   const handleCommand = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter') {
@@ -35,10 +35,12 @@ function App() {
       ))}
 
       <div className="w-full flex">
-        <label htmlFor="" className="mr-2 shrink-0">
+        <label htmlFor="commandInput" className="mr-2 shrink-0">
           {bash}
         </label>
         <input
+          id="commandInput"
+          name="commandInput"
           autoFocus
           value={input}
           onChange={(e) => setInput(e.target.value)}

@@ -1,4 +1,4 @@
-import { help, commandNotFound } from '../commands/commandsOutput';
+import { help, commandNotFound } from '../commands/commandsMsg';
 
 const useRunCommand = (cmd: string) => {
   switch (cmd) {
