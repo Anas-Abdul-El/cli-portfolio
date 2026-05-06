@@ -1,7 +1,5 @@
-import { render, screen } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
 import runCommand from './runCommand';
-import { run } from 'node:test';
 
 describe('runCommand', () => {
   it('returns help output for "help" command', () => {
