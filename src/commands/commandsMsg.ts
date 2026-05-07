@@ -1,6 +1,21 @@
-export const help = `Available commands:
+//-------------------------------------------------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------------------------------------------------
+// > File: src/commands/commandsMsg.ts
+// > created by @anas-abdul-el
+// > All the commands messages are stored in this file
+//-------------------------------------------------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+export const help = `
+                Available commands:
               - help: Show this help message
               - whoami: Learn more about me
+              - what-is-this: Learn more about this project
+              - skills -ls: List my skills
+              - projects -ls: List my projects
+              - gui: Visit my GUI portfolio
+              - github: Visit my GitHub profile
+              - whatido: Learn more about what I do
               - clear: Clear the terminal history`;
 
 export const commandNotFound = (cmd: string) => `command not found: ${cmd}`;
@@ -30,4 +45,5 @@ export const whatIdo = `
  - UI/UX Design: Creating intuitive and user-friendly interfaces with a focus on usability and accessibility.
  - Backend Development: Creating robust and scalable server-side applications with Node.js and Express.
  - Performance: Optimizing load times and runtime performance for seamless user experiences.
- - Modern Tools: Leveraging the latest tools and technologies to build cutting-edge solutions.`;
+ - Modern Tools: Leveraging the latest tools and technologies to build cutting-edge solutions.
+ - Continuous Learning: Staying up-to-date with industry trends and continuously improving my skills through learning and experimentation.`;

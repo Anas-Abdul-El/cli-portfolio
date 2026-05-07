@@ -38,6 +38,13 @@ const runCommand = (cmd: string) => {
         output: redirectingMsg('GUI portfolio'),
       };
 
+    case 'github':
+      setTimeout(() => {
+        window.open('https://github.com/anas-abdul-el', '_blank');
+      }, 1000);
+      return {
+        output: redirectingMsg('GitHub profile'),
+      };
     case 'whatido':
       return { output: whatIdo };
 
