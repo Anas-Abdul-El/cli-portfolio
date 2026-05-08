@@ -57,9 +57,6 @@ importers:
       globals:
         specifier: ^17.5.0
         version: 17.6.0
-      husky:
-        specifier: ^9.1.7
-        version: 9.1.7
       jsdom:
         specifier: ^29.1.1
         version: 29.1.1
