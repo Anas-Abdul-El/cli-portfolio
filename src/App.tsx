@@ -28,7 +28,7 @@ function App() {
   return (
     <div className="w-full h-screen bg-black text-green-500 font-mono p-4">
       {history.map((item, i) => (
-        <div key={i}>
+        <div key={i} className="mb-5">
           <div className="mr-2">Anas-Abdul-El &gt; {item.command}</div>
           <div>{item.output}</div>
         </div>

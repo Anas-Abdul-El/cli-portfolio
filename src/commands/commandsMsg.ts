@@ -1,8 +1,8 @@
 //-------------------------------------------------------------------------------------------------------------------------------------------------------
 //-------------------------------------------------------------------------------------------------------------------------------------------------------
 // > File: src/commands/commandsMsg.ts
-// > created by @anas-abdul-el
 // > All the commands messages are stored in this file
+// > created by @anas-abdul-el
 //-------------------------------------------------------------------------------------------------------------------------------------------------------
 //-------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -28,15 +28,18 @@ export const whatIsThis =
 
 export const skillsLs = `Skills:
 - Programming Languages: JavaScript, TypeScript, Java
-- Frameworks: React, Node.js, Express
-- Databases: MongoDB, MySQL
-- Tools: Git, Docker, Webpack, jest, vitest
-- Other: REST APIs, GraphQL, Agile Methodologies`;
+- Frameworks & Libraries: React, Node.js, Express, Next.js, Tailwind CSS
+- Databases: MongoDB, MySQL, redis
+- Version Control: Git
+- animation: Framer Motion
+- Tools: Git, Docker, Webpack, jest, vitest`;
 
 export const projectsLs = `Projects:
 1. Portfolio Website: A personal website built with React and TypeScript to showcase my skills and projects.
-2. Task Manager: A web application for managing tasks and to-do lists, built with Node.js and Express.
-3. E-commerce Platform: An online store built with React and MongoDB, featuring user authentication and payment integration.`;
+3. E-commerce Platform: A full-featured e-commerce platform for selling shoes with real-time inventory management and seamless checkout experience.
+4. Gym SAAS: A full-featured gym saas platform for managing gyms and clients with real-time inventory management and seamless checkout experience.
+5. landing page: a landing page for a company that creates websites for businesses.
+6. Notes App: Notic is a simple and responsive Notes Web App built with Next.js and Tailwind CSS, designed to help users easily create, organize, and manage their notes in a clean and intuitive interface.`;
 
 export const redirectingMsg = (site: string) => `Redirecting to my ${site}...`;
 
