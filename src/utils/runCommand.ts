@@ -17,7 +17,7 @@ const runCommand = (cmd: string) => {
     case 'whoami':
       return { output: whoAmI };
 
-    case 'what-is-this':
+    case 'whatisthis':
       return { output: whatIsThis };
 
     case 'skills -ls':

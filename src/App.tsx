@@ -18,19 +18,41 @@ function App() {
         return;
       }
 
+      if (input.includes(' && ')) {
+        const commands = input.split(' && ').map((cmd) => cmd.trim());
+        let combinedOutput = '';
+
+        for (const cmd of commands) {
+          const { output } = runCommand(cmd);
+          combinedOutput += `${bash} ${cmd}\n${output}\n`;
+        }
+
+        setHistory([...history, { command: input, output: combinedOutput }]);
+        setInput('');
+        return;
+      }
+
       const { output } = runCommand(input);
 
       setHistory([...history, { command, output }]);
       setInput('');
     }
+
+    if (e.key === 'ArrowUp') {
+      console.log('press');
+
+      if (history.length === 0) return;
+      const lastCommand = history[history.length - 1].command;
+      setInput(lastCommand);
+    }
   };
 
   return (
-    <div className="w-full h-screen bg-black text-green-500 font-mono p-4">
+    <div className="w-full min-h-screen bg-black text-green-500 font-mono p-4">
       {history.map((item, i) => (
         <div key={i} className="mb-5">
           <div className="mr-2">Anas-Abdul-El &gt; {item.command}</div>
-          <div>{item.output}</div>
+          <div className="whitespace-pre-wrap">{item.output}</div>
         </div>
       ))}
 
