@@ -10,7 +10,7 @@ export const help = `
 Available commands:\n
 - help: Show this help message\n
 - whoami: Learn more about me\n
-- what-is-this: Learn more about this project\n
+- whatisthis: Learn more about this project\n
 - skills -ls: List my skills\n
 - projects -ls: List my projects\n
 - gui: Visit my GUI portfolio\n
