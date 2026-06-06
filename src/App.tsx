@@ -1,12 +1,18 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import runCommand from './utils/runCommand';
 
 function App() {
   const [bash, setBash] = useState('Anas-Abdul-El >');
   const [input, setInput] = useState('');
+  const [help, setHelp] = useState('');
   const [history, setHistory] = useState<{ command: string; output: string }[]>(
     []
   );
+
+  useEffect(() => {
+    const h = 'Type help command to see the list of available commands.';
+    setHelp(h);
+  }, []);
 
   const handleCommand = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter') {
@@ -36,6 +42,7 @@ function App() {
 
       setHistory([...history, { command, output }]);
       setInput('');
+      setHelp('');
     }
 
     if (e.key === 'ArrowUp') {
@@ -49,6 +56,7 @@ function App() {
 
   return (
     <div className="w-full min-h-screen bg-black text-green-500 font-mono p-4">
+      {help}
       {history.map((item, i) => (
         <div key={i} className="mb-5">
           <div className="mr-2">Anas-Abdul-El &gt; {item.command}</div>
