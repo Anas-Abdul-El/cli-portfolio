@@ -7,45 +7,37 @@ import {
   projectsLs,
   redirectingMsg,
   whatIdo,
-} from '../commands/commandsMsg';
+} from "../commands/commandsMsg";
 
 const runCommand = (cmd: string) => {
   switch (cmd) {
-    case 'help':
+    case "help":
       return { output: help };
 
-    case 'whoami':
+    case "whoami":
       return { output: whoAmI };
 
-    case 'whatisthis':
+    case "whatisthis":
       return { output: whatIsThis };
 
-    case 'skills -ls':
+    case "skills -ls":
       return {
         output: skillsLs,
       };
 
-    case 'projects -ls':
+    case "projects -ls":
       return {
         output: projectsLs,
       };
 
-    case 'gui':
+    case "github":
       setTimeout(() => {
-        window.open('https://anas-abdul-el.vercel.app/', '_blank');
+        window.open("https://github.com/anas-abdul-el", "_blank");
       }, 1000);
       return {
-        output: redirectingMsg('GUI portfolio'),
+        output: redirectingMsg("GitHub profile"),
       };
-
-    case 'github':
-      setTimeout(() => {
-        window.open('https://github.com/anas-abdul-el', '_blank');
-      }, 1000);
-      return {
-        output: redirectingMsg('GitHub profile'),
-      };
-    case 'whatido':
+    case "whatido":
       return { output: whatIdo };
 
     default:
